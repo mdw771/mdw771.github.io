@@ -4,7 +4,7 @@
 
 # Name of your site (displayed in the header)
 name: Triethanolamine
-theme: jekyll-theme-architect
+theme: alembic-jekyll-theme
 
 # Short bio or description (displayed in the header)
 description: Random computation guy and (minor) physics cracker; Vocaloid fan.
@@ -32,6 +32,18 @@ footer-links:
   youtube: # channel/<your_long_string> or user/<user-name>
   googleplus: # anything in your profile username that comes after plus.google.com/
 
+plugins:
+- jekyll-sitemap
+- jekyll-mentions
+- jekyll-paginate
+- jekyll-seo-tag
+- jekyll-redirect-from
+- jekyll-default-layout
+- jekyll-feed
+- jekyll-commonmark
+- jekyll-include-cache
+- jemoji
+- jekyll-remote-theme
 
 # Enter your Disqus shortname (not your username) to enable commenting on posts
 # You can find your shortname on the Settings page of your Disqus account
