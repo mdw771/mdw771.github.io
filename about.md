@@ -15,6 +15,7 @@ develop Python-based software packages that:
 - addresses the problem of multiple scattering in samples thicker than the depth-of-focus
   limit by using optimization-based reconstruction algorithms. We are implementing
   this using automatic differentiation powered by TensorFlow and Autograd. ([Adorym](https://github.com/mdw771/adorym); [Publication](https://arxiv.org/abs/1905.10433))
+[**Download CV**](https://mdw771.github.io/mingdu_cv.pdf)
 
 我是一只在X射线计算成像领域从事研究工作的博后。作为研究兴趣的一部分，我
 与同事和合作者一起开发基于Python的软件包，以用于下列各项用途：
@@ -24,6 +25,7 @@ develop Python-based software packages that:
   注重软件在超算（HPC）上运行的能力。([AuTomo](https://github.com/decarlof/automo))
 - 使用基于优化的重构算法，解决在测量厚度超过焦深的样品时所遇到的多次散射问题，并利用
   TensorFlow或Autograd所提供的自动微分功能对该算法加以实现。([Adorym](https://github.com/mdw771/adorym); [Publication](https://arxiv.org/abs/1905.10433))
+[**查看CV**](https://mdw771.github.io/mingdu_cv.pdf)
 
 I do some video creation and music composing/arrangement in my spare time.
 Vocaloid/SynthV and the sub-culture derived from it are of particular interest of mine.
