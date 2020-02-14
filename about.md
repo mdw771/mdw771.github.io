@@ -16,7 +16,7 @@ develop Python-based software packages that:
   limit by using optimization-based reconstruction algorithms. We are implementing
   this using automatic differentiation powered by TensorFlow and Autograd. ([Adorym](https://github.com/mdw771/adorym); [Publication](https://arxiv.org/abs/1905.10433))
 
-[**Download CV**](https://github.com/mdw771/mdw771.github.io/raw/master/cv_mingdu.pdf)
+[**Download CV**](https://github.com/mdw771/mdw771.github.io/blob/master/resources/cv_mingdu.pdf)
 
 我是一只在X射线计算成像领域从事研究工作的博后。作为研究兴趣的一部分，我
 与同事和合作者一起开发基于Python的软件包，以用于下列各项用途：
