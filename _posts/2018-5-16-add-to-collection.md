@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Starting a new graph following a previous one&#58 a case study on better understanding Tensorflow ops and graphs
+title: Starting a new graph following a previous one - a case study on better understanding Tensorflow ops and graphs
 ---
 
 As you see I've been using Tensorflow for some purposes that are kind of off the path -

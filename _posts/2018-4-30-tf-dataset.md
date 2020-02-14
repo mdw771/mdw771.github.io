@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Using Dataset in parallelized Tensorflow&#58 An ultra-brief note
+title: Using Dataset in parallelized Tensorflow - an ultra-brief note
 ---
 
 I used Tensorflow's feed dictionary for quite a while before I realized that
