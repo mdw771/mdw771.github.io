@@ -10,42 +10,45 @@ dqk / dz = ∇F(w) + ∇2F(w) z.  (1.5)
 
 Setting dqk / dz = 0, the value of z* = sk that minimizes F at the vicinity of w_k then satisfies
 
- (2)
+![](https://github.com/mdw771/mdw771.github.io/blob/master/images/20200617/001.png)  (2)
  
 Parameter w should then be updated along vector sk which again is w - w_k:
 
-  (3)
+![](https://github.com/mdw771/mdw771.github.io/blob/master/images/20200617/002.png)  (3)
   
 For a quadratic function F, the Taylor expansion is exact, and the minimum should be reached in one step with α = 1.
 
 
 **2. Hessian-free inexact Newton methods**
 
-Eq. (2) is solved as an inner iterative cycle using methods like conjugate gradient descent. In doing so, one never explicitly builds the Hessian   but only need to know the Hessian-vector product , and this is why it's called Hessian-free.
+Eq. (2) is solved as an inner iterative cycle using methods like conjugate gradient descent. In doing so, one never explicitly builds the Hessian ![](https://github.com/mdw771/mdw771.github.io/blob/master/images/20200617/003.png) but only need to know the Hessian-vector product ![](https://github.com/mdw771/mdw771.github.io/blob/master/images/20200617/004.png), and this is why it's called Hessian-free.
 
 
 **3. Quasi-Newton methods (e.g. BFGS)**
 
-The inverse of the Hessian  is approximated iteratively along with the parameter optimization process. Eq. (3) becomes
+The inverse of the Hessian ![](https://github.com/mdw771/mdw771.github.io/blob/master/images/20200617/005.png) is approximated iteratively along with the parameter optimization process. Eq. (3) becomes
 
- (4)
+![](https://github.com/mdw771/mdw771.github.io/blob/master/images/20200617/006.png) (4)
  
-where H_k tries to approximate . H_k is updated following each iteration. For BFGS, it's done as
+where H_k tries to approximate 
+![](https://github.com/mdw771/mdw771.github.io/blob/master/images/20200617/007.png). H_k is updated following each iteration. For BFGS, it's done as
 
-  (5)
+
+![](https://github.com/mdw771/mdw771.github.io/blob/master/images/20200617/008.png)  (5)
   
 where
 
-.
+![](https://github.com/mdw771/mdw771.github.io/blob/master/images/20200617/009.png).
 
-A variant, low-memory BFGS (L-BFGS) doesn't explicitly construct H_k, but update the product  directly ([1], Algorithm 6.2).
+A variant, low-memory BFGS (L-BFGS) doesn't explicitly construct H_k, but update the product 
+![](https://github.com/mdw771/mdw771.github.io/blob/master/images/20200617/010.png) directly ([1], Algorithm 6.2).
 
 
 **4. Gauss-Newton methods**
 
-Approximate the Hessian  using a different way, where the approximation is guaranteed to be positive definite. But doesn't account for second-order interactions between elements of w (e.g., ∂2F/∂wiwj).
+Approximate the Hessian ![](https://github.com/mdw771/mdw771.github.io/blob/master/images/20200617/011.png) using a different way, where the approximation is guaranteed to be positive definite. But doesn't account for second-order interactions between elements of w (e.g., ∂2F/∂wiwj).
 
- (6)
+![](https://github.com/mdw771/mdw771.github.io/blob/master/images/20200617/012.png) (6)
  
 where h is the prediction function, and l is the loss. Hl is the Hessian of the l with regards to h, and Jh is the Jacobian of h with regards to w. The update vector sk as in Eq. (2) is then
 
@@ -92,16 +95,17 @@ D[h(w_k) || h(w_k + dw)] ≈ 1/2 dwT G(w) dw.  (14)
 
 The Fisher information matrix in turn can be approximated as
 
-  (15)
+![](https://github.com/mdw771/mdw771.github.io/blob/master/images/20200617/013.png)  (15)
   
 which resembles the Gauss-Newton approximation of the Hessian when the loss function is of a least-squares type.
 
 To minimize F(w) subject to D[h(w_k) || h(w_k + dw)] <= ηk, one can turn the constrained optimization problem into an unconstrained optimization problem using Lagrangian multiplier:
-  (16)
+
+![](https://github.com/mdw771/mdw771.github.io/blob/master/images/20200617/014.png)  (16)
   
 and the update relation would then be
 
-.  (17)
+![](https://github.com/mdw771/mdw771.github.io/blob/master/images/20200617/015.png).  (17)
 
 Comparing (17) with (4), we will notice that the natural gradient method is nearly equivalent to a quasi-Newton method that approximate the Hessian using a Gauss-Newton matrix.
 
