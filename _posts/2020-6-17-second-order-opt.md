@@ -1,3 +1,5 @@
+(See a better formatted version at: [https://www.evernote.com/l/ASPz1IsCBhtDXrsqgj11-slWkjiLiQA50hk](https://www.evernote.com/l/ASPz1IsCBhtDXrsqgj11-slWkjiLiQA50hk))
+
 **1. Basics**
 
 Expanding function F(w) at w_k results in
