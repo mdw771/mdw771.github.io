@@ -113,5 +113,6 @@ Comparing (17) with (4), we will notice that the natural gradient method is near
 **References**
 
 [1] Bottou, L., Curtis, F. E. & Nocedal, J. Optimization Methods for Large-Scale Machine Learning. (2016).
+
 [2] Henriques, J. F., Ehrhardt, S., Albanie, S. & Vedaldi, A. Small steps and giant leaps: Minimal Newton solvers for Deep Learning. (2018).
 
