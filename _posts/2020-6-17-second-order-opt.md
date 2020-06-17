@@ -1,3 +1,8 @@
+---
+layout: post
+title: Second order optimization methods: a quick overview
+---
+
 (See a better formatted version at: [https://www.evernote.com/l/ASPz1IsCBhtDXrsqgj11-slWkjiLiQA50hk](https://www.evernote.com/l/ASPz1IsCBhtDXrsqgj11-slWkjiLiQA50hk))
 
 **1. Basics**
