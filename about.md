@@ -4,9 +4,11 @@ title: About
 permalink: /about/
 ---
 
-I'm a postdoc working in the field of x-ray computational imaging.  
+I'm currently working at KLA as an algorithm engineer. Before joining KLA,
+I worked as a postdoc (Argonne National Laboratory) and PhD student (Northwestern University)
+in the field of x-ray computational imaging.  
 As a part of my research interest, I, along with my colleagues,
-develop Python-based software packages that:
+developed Python-based software packages that:
 - process, stitch and reconstruct multi-field-of-view tomography data,
   so that the 3D volume of samples as large as several centimeters can be
   retrieved with sub-micron resolution. ([Tomosaic](https://github.com/mdw771/tomosaic2.git); [Publication](https://journals.iucr.org/s/issues/2018/05/00/il5010/)) 
@@ -18,7 +20,8 @@ develop Python-based software packages that:
 
 [**Download CV**](https://github.com/mdw771/mdw771.github.io/blob/master/resources/cv_mingdu.pdf)
 
-我是一只在X射线计算成像领域从事研究工作的博后。作为研究兴趣的一部分，我
+目前，我在KLA担任算法工程师。在加入KLA之前，我的博后（阿贡国家实验室）与博士（美国西北大学）
+工作主要集中在X射线计算成像领域。作为研究兴趣的一部分，我
 与同事和合作者一起开发基于Python的软件包，以用于下列各项用途：
 - 处理、拼接并重构多视场层析数据，由此对大至几厘米的样品实现亚微米级分辨率
   的三维重构。([Tomosaic](https://github.com/mdw771/tomosaic2.git); [Publication](https://journals.iucr.org/s/issues/2018/05/00/il5010/))
@@ -29,12 +32,14 @@ develop Python-based software packages that:
 
 [**查看CV**](https://github.com/mdw771/mdw771.github.io/blob/master/resources/cv_mingdu.pdf)
 
-I do some video creation and music composing/arrangement in my spare time.
-Vocaloid/SynthV and the sub-culture derived from it are of particular interest of mine.
-I also like to do a little bit 3D modeling and animation using [Blender](https://www.blender.org/).
+I used to do some video creation and music composing/arrangement in my spare time,
+particularly surrounding Vocaloid/SynthV.
+I also used to do a little bit 3D modeling and animation using [Blender](https://www.blender.org/).
+For a (incomplete) list of my past works, please refer to the [Hobby Portfolio](https://mdw771.github.io/portfolio/) page. 
 
-闲着的时候会搞一点视频创作以及音乐作编曲。我对Vocaloid/SynthV及其衍生的亚文化
-有特别的兴趣。偶尔还会用[Blender](https://www.blender.org/) 做点3D建模玩。
+曾经闲着的时候会搞一点视频创作以及音乐作编曲，尤以Vocaloid/SynthV最为相关。
+偶尔还会用[Blender](https://www.blender.org/) 做点3D建模玩。
+[Hobby Portfolio](https://mdw771.github.io/portfolio/) 中列出了某几项过去的作品。
 
 ### Topics to be covered in this blog 
 
