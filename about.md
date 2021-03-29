@@ -16,7 +16,7 @@ developed Python-based software packages that:
   and, in particular, capable of working with high-performance computers (HPCs). ([AuTomo](https://github.com/decarlof/automo))
 - addresses the problem of multiple scattering in samples thicker than the depth-of-focus
   limit by using optimization-based reconstruction algorithms. We are implementing
-  this using automatic differentiation powered by TensorFlow and Autograd. ([Adorym](https://github.com/mdw771/adorym); [Publication](https://arxiv.org/abs/1905.10433))
+  this using automatic differentiation powered by TensorFlow and Autograd. ([Adorym](https://github.com/mdw771/adorym); [Publication](https://www.osapublishing.org/oe/fulltext.cfm?uri=oe-29-7-10000&id=449265))
 
 [**Download CV**](https://github.com/mdw771/mdw771.github.io/blob/master/resources/cv_mingdu.pdf)
 
