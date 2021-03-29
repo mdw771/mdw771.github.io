@@ -17,9 +17,9 @@ permalink: /portfolio/
 ### As lyrics writer
 
 - Among Us (album of 3 tracks) [[Bandcamp]](https://teenagingcu.bandcamp.com/releases?fbclid=IwAR2HcjcjIiSfeWeZyb8gXKo5rw9f269vVE0KQLoupIn-P8GAeQkSbVmbFAk)
--- Sink to Unseen
--- Ephemeral
--- Skylake
+  - Sink to Unseen
+  - Ephemeral
+  - Skylake
 
 ### As all-roles creator
 

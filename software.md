@@ -12,7 +12,7 @@ samples beyond the detector's field of view.
 
 [[Github]](https://github.com/mdw771/tomosaic2.git)
 
-[[Publication]](https://journals.iucr.org/s/issues/2018/05/00/il5010/))
+[[Publication]](https://journals.iucr.org/s/issues/2018/05/00/il5010/)
 
 ## Adorym
 
