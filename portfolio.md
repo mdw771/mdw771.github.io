@@ -8,7 +8,8 @@ permalink: /portfolio/
 
 ### As composer
 
-- The First Call [[Bandcamp]](https://teoa.bandcamp.com/track/the-first-call)  
+- The First Call [[Bandcamp]](https://teoa.bandcamp.com/track/the-first-call) 
+- 梦里霜白（*When the Frost Fades*） [[Bilibili]](https://www.bilibili.com/video/BV1GW4114714/) *Dedicated to one soul embroidered with both tragedy and determination. (Also as lyrics writer and video creator.)*
 
 ### As video creator
 
@@ -24,6 +25,7 @@ permalink: /portfolio/
 ### As all-roles creator
 
 - Meridians' Shades [[Youtube]](https://www.youtube.com/watch?v=AX7MQY8LxEQ&t=14s) [[Bilibili:Vocaloid]](https://b23.tv/av49043256)
+- 致弗雷（*To Fray*） [[Bilibili]](https://www.bilibili.com/video/BV1ba4y1e7zx/) *A song dedicated to Fray, an FFXIV in-game character. *
 
 ## Graphics, modeling, illustration
 
