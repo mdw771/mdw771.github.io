@@ -3,116 +3,112 @@ layout: post
 title: Second order optimization methods - a quick overview
 ---
 
-(See a better formatted version at: [https://www.evernote.com/l/ASPz1IsCBhtDXrsqgj11-slWkjiLiQA50hk](https://www.evernote.com/l/ASPz1IsCBhtDXrsqgj11-slWkjiLiQA50hk))
-
 **1. Basics**
 
-Expanding function F(w) at w_k results in
+Expanding function \\( F(w) \\) at \\( w_k \\) (the solution at the \\( k \\)-th iteration) results in
 
-qk(w) = F(w_k) + ∇F(w_k)^T(w - w_k) + 1/2 (w - w_k)^T ∇2F(w) (w - w_k).  (1)
+$$ q_k(w) = F(w_k) +\nabla F(w_k)^T(w - w_k) + \frac{1}{2} (w - w_k)^T \nabla^2 F(w) (w - w_k). \qquad(1)$$ 
 
-Let z = w - w_k, then dqk / dz is
+Let \\( z = w - w_k \\) be the update vector for the \\( k \\)-th iteration. We want to find the \\( z \\) that minimizes the quadratic approximation of Eq. (1). To do this, we find \\( dq_k / dz \\) to be
 
-dqk / dz = ∇F(w) + ∇2F(w) z.  (1.5)
+$$ dq_k / dz = \nabla F(w) + \nabla^2 F(w) z.  \qquad(2) $$
 
-Setting dqk / dz = 0, the value of z* = sk that minimizes F at the vicinity of w_k then satisfies
+Setting \\( dq_k / dz = 0 \\), the value of \\( z^* \\) that minimizes \\( F \\) at the vicinity of \\( w_k \\) then satisfies
 
-![](https://github.com/mdw771/mdw771.github.io/blob/master/images/20200617/001.png)  (2)
+$$ \nabla^2 F(w_k)z^* = -\nabla F(w_k).  \qquad(3) $$
  
-Parameter w should then be updated along vector sk which again is w - w_k:
+Parameter w should then be updated along vector sk which again is \\( w - w_k \\):
 
-![](https://github.com/mdw771/mdw771.github.io/blob/master/images/20200617/002.png)  (3)
+$$ w_{k+1} \leftarrow w_k + \alpha z^*.  \qquad(4) $$
   
-For a quadratic function F, the Taylor expansion is exact, and the minimum should be reached in one step with α = 1.
+For a quadratic function \\( F \\), the Taylor expansion is exact, and the minimum should be reached in one step with \\( \alpha = 1 \\).
 
 
 **2. Hessian-free inexact Newton methods**
 
-Eq. (2) is solved as an inner iterative cycle using methods like conjugate gradient descent. In doing so, one never explicitly builds the Hessian ![](https://github.com/mdw771/mdw771.github.io/blob/master/images/20200617/003.png) but only need to know the Hessian-vector product ![](https://github.com/mdw771/mdw771.github.io/blob/master/images/20200617/004.png), and this is why it's called Hessian-free.
+Eq. (3) is solved as an inner iterative cycle using methods like conjugate gradient descent. In doing so, one never explicitly builds the Hessian \\( \nabla^2 F(w_k) \\) but only need to know the Hessian-vector product \\( \nabla^2 F(w_k)z^* \\), and this is why it's called Hessian-free.
 
 
 **3. Quasi-Newton methods (e.g. BFGS)**
 
-The inverse of the Hessian ![](https://github.com/mdw771/mdw771.github.io/blob/master/images/20200617/005.png) is approximated iteratively along with the parameter optimization process. Eq. (3) becomes
+The inverse of the Hessian \\( \nabla^2 F(w_k) \\) is approximated iteratively along with the parameter optimization process. Eq. (4) becomes
 
-![](https://github.com/mdw771/mdw771.github.io/blob/master/images/20200617/006.png) (4)
+$$ w_{k+1} \leftarrow w_k - \alpha H_k^{-1} \nabla F(w_k) \qquad(5) $$
  
-where H_k tries to approximate 
-![](https://github.com/mdw771/mdw771.github.io/blob/master/images/20200617/007.png). H_k is updated following each iteration. For BFGS, it's done as
+where \\( H_k^{-1} \\) tries to approximate \\( (\nabla^2 F(w_k))^{-1} \\). \\( H_k^{-1} \\) is updated following each iteration. For BFGS, it's done as
 
-
-![](https://github.com/mdw771/mdw771.github.io/blob/master/images/20200617/008.png)  (5)
+$$ H_{k+1}^{-1} \leftarrow \left( I - \frac{v_k z^{*T}}{z^{*T} v_k} \right)^T H_k^{-1} \left( I - \frac{v_k z^{*T}}{z^{*T} v_k} \right) + \frac{z^* z^{*T}}{z^{*T} v_k} \qquad(6) $$
   
-where
+where \\( I \\) is the identity matrix, and
 
-![](https://github.com/mdw771/mdw771.github.io/blob/master/images/20200617/009.png).
+$$ v_k = \nabla F(w_{k+1}) - \nabla F(w_k). $$
 
-A variant, low-memory BFGS (L-BFGS) doesn't explicitly construct H_k, but update the product 
-![](https://github.com/mdw771/mdw771.github.io/blob/master/images/20200617/010.png) directly ([1], Algorithm 6.2).
+A variant, low-memory BFGS (L-BFGS) doesn't explicitly construct \\( H_k^{-1} \\), but update the product 
+\\( H_k^{-1}\nabla F(w_k) \\) directly ([1], Algorithm 6.2).
 
 
 **4. Gauss-Newton methods**
 
-Approximate the Hessian ![](https://github.com/mdw771/mdw771.github.io/blob/master/images/20200617/011.png) using a different way, where the approximation is guaranteed to be positive definite. But doesn't account for second-order interactions between elements of w (e.g., ∂2F/∂wiwj).
+Gauss-Newton methods approximate the Hessian \\( \nabla^2 F(w_k) \\) in a different way, where the approximation is guaranteed to be positive definite (however, it doesn't account for second-order interactions between elements of \\( w \\) (e.g., \\( \frac{\partial^2 F}{\partial w_i \partial w_j} \\))):
 
-![](https://github.com/mdw771/mdw771.github.io/blob/master/images/20200617/012.png) (6)
+$$ G_k(w_k) = J_h(w_k)^T H_l(w_k)J_h(w_k) \qquad(7) $$
  
-where h is the prediction function, and l is the loss. Hl is the Hessian of the l with regards to h, and Jh is the Jacobian of h with regards to w. The update vector sk as in Eq. (2) is then
+where \\( h \\) is the prediction function as in \\( F(w_k) = \|\| h(w_k) - y \|\|^2 \\) if the loss function \\( F(w_k) \\) is least-squares. \\( H_l \\) is the Hessian of the loss function with regards to \\( h \\), and \\( J_h \\) is the Jacobian of \\( h \\) with regards to \\( w \\). The update vector \\( z^* \\) as in Eq. (3) is then
 
-G(w_k) sk = -∇F(w_k).    (7)
+$$ G_k(w_k) z^* = -\nabla F(w_k).  \qquad(8) $$
 
 **4.1. Levenberg algorithm**
-(7) can be solved using conjugate gradient. However, more often G(w) in (7) is regularized with a damp factor. This yields the Levenberg algorithm which solves
 
-[G(w_k) - λI] sk = -∇F(w_k).    (8)
+Eq. (8) can be solved using conjugate gradient. However, more often \\( G(w_k) \\) in (8) is regularized with a damp factor. This yields the Levenberg algorithm which solves
 
-using CG.
+$$ [G(w_k) - \lambda I] z^* = -\nabla F(w_k). \qquad(9). $$
 
 **4.2. Curveball algorithm**
-An alternative way is to go back to (1). Using G(w) to approximate the Hessian, (1) becomes
 
-qk(w) = F(w_k) + ∇F(w_k)^T z + 1/2 z^T G(w) z.  (9)
+An alternative way is to go back to (1). Using \\( G(w_k) \\) to approximate the Hessian, (1) becomes
 
-and we want to solve for the update vector sk as
+$$ q_k(w) = F(w_k) +\nabla F(w_k)^T(w - w_k) + \frac{1}{2} (w - w_k)^T G(w_k) (w - w_k). $$
 
-sk = argminz F(w_k) + ∇F(w_k)^Tz + 1/2 z^T G(w) z.  (10)
+and we want to solve for the update vector \\( z^* \\) as
 
-That is, instead of solving dqk/dz = 0, we minimize q.
+$$ z^* = \mbox{argmin}_z \left[ F(w_k) + \nabla F(w_k)^T z + \frac{1}{2} z^T G(w_k) z \right].  \qquad(10) $$
 
-The Curveball algorithm does this by first getting an estimate of sk using one gradient descent iteration on (10), and then mix it with the old update vector:
+So far it might appear that we are just restepping along the route introduced following Eq. (1), but now we shall notice that given the iterative nature of non-linear optimization, the update vector of each iteration doesn't have to be very precise. Thus, instead of solving exactly \\( dq_k / dz = 0 \\), we minimize \\( q_k(w_k) \\).
 
-z' = G(w_k) z + ∇F(w)  (11)
+The Curveball algorithm does this by first getting an estimate of \\( z^* \\) using one gradient descent iteration on (10), and then mix it with the old update vector:
 
-sk = ρ z - β z'.  (12)
+$$ z' = G(w_k) z + \nabla F(w)  \qquad(11) $$
 
-This results in the Curveball algorithm. The regularized version of (11) would be
+$$ z^* = \rho z - \beta z'.  \qquad(12) $$
 
-z' = [G(w_k) + λI] z + ∇F(w).  (13)
+This results in the Curveball algorithm, which eliminates the need of inverting the Gauss-Newton matrix at each iteration. The regularized version of (11) would be
 
-Parameters ρ and β can be estimated using Eq. 19 of [2].
+$$ z' = [G(w_k) + \lambda I] z + \nabla F(w_k).  \qquad(13) $$
+
+Parameters \\( \rho \\) and \\( \beta \\) can be estimated using Eq. 19 of [2].
 
 
 **5. Natural gradient methods**
 
-The prediction function with parameter w, h(w), dictates the parameters of the probability distribution that the samples are subject to (for example, prediction function of an optical forward model gives the expectation and variance of a Poisson PDF). The difference between two distributions, one determined by h(w_k), the other determined by h(w_k+1), is measured by the KL divergence, D[h(w_k) || h(w_k+1)]. Natural gradient methods minimize the loss function F(w) subject to the constraint that D[h(w_k) || h(w_k + dw)] is small (D <= ηk).
+The prediction function \\( h(w) \\) dictates the parameters of the probability distribution that the samples are subject to (for example, prediction function of an optical forward model gives the expectation and variance of a Poisson PDF). The difference between two distributions, one determined by \\( h(w_k) \\), the other determined by \\( h(w_{k+1}) \\), is measured by the KL divergence, \\( D[h(w_k) \|\| h(w_{k+1})] \\). Natural gradient methods minimize the loss function \\( F(w) \\) subject to the constraint that \\( D[h(w_k) \|\| h(w_k + dw)] \\) is small ( \\( D \le \eta k \\) ).
 
-On the other hand, the KL divergence D[h(w_k) || h(w_k + dw)] can be approximated by in terms of the Fisher information matrix G(w) as
+On the other hand, the KL divergence \\( D[h(w_k) \|\| h(w_k + dw)] \\) can be approximated by in terms of the Fisher information matrix G(w) as
 
-D[h(w_k) || h(w_k + dw)] ≈ 1/2 dwT G(w) dw.  (14)
+$$ D[h(w_k) \| h(w_k + dw)] \approx \frac{1}{2} dw^T G(w_k) dw.  \qquad(14) $$
 
 The Fisher information matrix in turn can be approximated as
 
-![](https://github.com/mdw771/mdw771.github.io/blob/master/images/20200617/013.png)  (15)
+$$ \hat{G}(w_k) = \left(\frac{\partial \log[h(w_k)]}{\partial w_k}\right) \left(\frac{\partial \log[h(w_k)]}{\partial w_k}\right)^T $$
   
 which resembles the Gauss-Newton approximation of the Hessian when the loss function is of a least-squares type.
 
-To minimize F(w) subject to D[h(w_k) || h(w_k + dw)] <= ηk, one can turn the constrained optimization problem into an unconstrained optimization problem using Lagrangian multiplier:
+To minimize \\( F(w) \\) subject to \\( D[h(w_k) \|\| h(w_k + dw)] \le \eta k \\), one can turn the constrained optimization problem into an unconstrained optimization problem using Lagrangian multiplier:
 
-![](https://github.com/mdw771/mdw771.github.io/blob/master/images/20200617/014.png)  (16)
+$$ w_{k+1} = \mbox{argmin}_w \left[ \nabla F(w_k)^T (w - w_k) + \frac{1}{2\alpha}(w - w_k)^T G(w_k) (w - w_k) \right] $$
   
 and the update relation would then be
 
-![](https://github.com/mdw771/mdw771.github.io/blob/master/images/20200617/015.png).  (17)
+$$ w_{k+1} = w_k - \alpha G^{-1}(w_k) \nabla F(w_k). \qquad(17) $$
 
 Comparing (17) with (4), we will notice that the natural gradient method is nearly equivalent to a quasi-Newton method that approximate the Hessian using a Gauss-Newton matrix.
 
