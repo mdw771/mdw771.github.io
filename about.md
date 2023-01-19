@@ -65,3 +65,4 @@ the rest will be in English only.
 ### Contact me
 
 [cruiser0631@gmail.com](mailto:cruiser0631@gmail.com)
+[Google Scholar Profile](https://scholar.google.com/citations?user=fw3MNIsAAAAJ&hl=en&authuser=2)
