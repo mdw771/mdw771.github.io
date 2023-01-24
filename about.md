@@ -19,6 +19,7 @@ developed Python-based software packages that:
   this using automatic differentiation powered by TensorFlow and Autograd. ([Adorym](https://github.com/mdw771/adorym); [Publication](https://www.osapublishing.org/oe/fulltext.cfm?uri=oe-29-7-10000&id=449265))
 
 [**Download CV**](https://github.com/mdw771/mdw771.github.io/blob/master/resources/cv_mingdu.pdf)
+[**Download resume**](https://github.com/mdw771/mdw771.github.io/blob/master/resources/resume_mingdu.pdf)
 
 目前，我在KLA担任算法工程师。在加入KLA之前，我的博后（阿贡国家实验室）与博士（美国西北大学）
 工作主要集中在X射线计算成像领域。作为研究兴趣的一部分，我
@@ -30,7 +31,8 @@ developed Python-based software packages that:
 - 使用基于优化的重构算法，解决在测量厚度超过焦深的样品时所遇到的多次散射问题，并利用
   TensorFlow或Autograd所提供的自动微分功能对该算法加以实现。([Adorym](https://github.com/mdw771/adorym); [Publication](https://arxiv.org/abs/1905.10433))
 
-[**查看CV**](https://github.com/mdw771/mdw771.github.io/blob/master/resources/cv_mingdu.pdf)
+[**下载CV**](https://github.com/mdw771/mdw771.github.io/blob/master/resources/cv_mingdu.pdf)
+[**下载简历**](https://github.com/mdw771/mdw771.github.io/blob/master/resources/resume_mingdu.pdf)
 
 I used to do some video creation and music composing/arrangement in my spare time,
 particularly surrounding Vocaloid/SynthV.
