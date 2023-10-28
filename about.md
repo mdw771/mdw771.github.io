@@ -4,9 +4,8 @@ title: About
 permalink: /about/
 ---
 
-I'm currently working at KLA as an algorithm engineer. Before joining KLA,
-I worked as a postdoc (Argonne National Laboratory) and PhD student (Northwestern University)
-in the field of x-ray computational imaging.  
+I'm currently working at Argonne National Laboratory as an assistant computational scientist. Before joining KLA,
+I worked as an algorithm engineer at KLA (KLA-Tencor) and a postdoc at Argonne National Lab. 
 As a part of my research interest, I, along with my colleagues,
 developed Python-based software packages that:
 - process, stitch and reconstruct multi-field-of-view tomography data,
@@ -21,8 +20,7 @@ developed Python-based software packages that:
 [**Download CV**](https://github.com/mdw771/mdw771.github.io/blob/master/resources/cv_mingdu.pdf)
 [**Download resume**](https://github.com/mdw771/mdw771.github.io/blob/master/resources/resume_mingdu.pdf)
 
-目前，我在KLA担任算法工程师。在加入KLA之前，我的博后（阿贡国家实验室）与博士（美国西北大学）
-工作主要集中在X射线计算成像领域。作为研究兴趣的一部分，我
+目前，我在阿贡国家实验室担任助理计算研究员。此前，我曾在KLA担任算法工程师，以及在阿贡从事博后工作。作为研究兴趣的一部分，我
 与同事和合作者一起开发基于Python的软件包，以用于下列各项用途：
 - 处理、拼接并重构多视场层析数据，由此对大至几厘米的样品实现亚微米级分辨率
   的三维重构。([Tomosaic](https://github.com/mdw771/tomosaic2.git); [Publication](https://journals.iucr.org/s/issues/2018/05/00/il5010/))
@@ -52,6 +50,8 @@ For a (incomplete) list of my past works, please refer to the [Hobby Portfolio](
 - Building and configuration of scientific-computation-oriented development environment;
 - Some random Linux tips. 
 
+### 本站点内容主要涵盖的主题
+
 - 基于Python的数值计算与图像处理；
 - 研究数据的统计分析与可视化；
 - Tensorflow/Autograd的使用及其在解优化问题中的应用；
@@ -66,6 +66,6 @@ the rest will be in English only.
 
 ### Contact me
 
-[cruiser0631@gmail.com](mailto:cruiser0631@gmail.com)
+[ming.du101@gmail.com](mailto:cruiser0631@gmail.com)
 
 [Google Scholar Profile](https://scholar.google.com/citations?user=fw3MNIsAAAAJ&hl=en&authuser=2)
