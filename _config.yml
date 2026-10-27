@@ -31,6 +31,12 @@ theme: minima
 plugins:
   - jekyll-feed
 
+# Local tooling and documentation must not be copied into the public site.
+exclude:
+  - .build-env/
+  - bin/
+  - AGENTS.md
+
 # Exclude from processing.
 # The following items will not be processed, by default.
 # Any item listed under the `exclude:` key here will be automatically added to
