@@ -119,7 +119,7 @@ This weighted average is then the global solution of MACE.
 The following figure is taken from the presentation of Charles Bouman
 given in SIAM Imaging Science 2020.
 
-![MACE](https://github.com/mdw771/mdw771.github.io/raw/master/images/20200710/mace.png "MACE")
+![MACE]({{ '/images/20200710/mace.png' | relative_url }} "MACE")
 
 For more details, please refer to the paper by Buzzard *et al*.
 

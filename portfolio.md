@@ -34,4 +34,4 @@ permalink: /portfolio/
 - Software: Blender 2.0
 - Model repository: [[Sketchfab]](https://sketchfab.com/3d-models/killer-whale-33862cf4ccce4cc799675d2101cc2477)
 
-![Killer whale](https://github.com/mdw771/mdw771.github.io/raw/master/images/portfolio/whale_003.png "Killer whale")
+![Killer whale]({{ '/images/portfolio/whale_003.png' | relative_url }} "Killer whale")

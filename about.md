@@ -9,7 +9,7 @@ permalink: /about/
 I'm currently working at Argonne National Laboratory as a computational scientist. Before joining KLA,
 I worked as an algorithm engineer at KLA (KLA-Tencor) and a postdoc at Argonne National Lab. 
 
-[**Download CV**](https://github.com/mdw771/mdw771.github.io/blob/master/resources/cv_mingdu.pdf)
+[**Download CV**]({{ '/resources/cv_mingdu.pdf' | relative_url }})
 
 ## My research
 
@@ -68,7 +68,7 @@ For a (incomplete) list of my past works, please refer to the [Hobby Portfolio](
 
 目前，我在阿贡国家实验室（Argonne National Laboratory）担任计算研究员。此前，我曾在 KLA（KLA-Tencor）担任算法工程师，也曾在阿贡从事博士后研究。
 
-[**下载 CV**](https://github.com/mdw771/mdw771.github.io/blob/master/resources/cv_mingdu.pdf)
+[**下载 CV**]({{ '/resources/cv_mingdu.pdf' | relative_url }})
 
 ## 我的研究
 

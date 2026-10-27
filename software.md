@@ -5,7 +5,7 @@ permalink: /software/
 ---
 
 ## Tomosaic
-![Tomosaic](https://github.com/mdw771/mdw771.github.io/raw/master/images/research_img_tomosaic.png "Tomosaic")
+![Tomosaic]({{ '/images/research_img_tomosaic.png' | relative_url }} "Tomosaic")
 
 Tomosaic is a Python package for mosaic tomography, a technique dedicated for the 3D imaging of large-sized
 samples beyond the detector's field of view. 
@@ -16,7 +16,7 @@ samples beyond the detector's field of view.
 
 ## Adorym
 
-![Beyond DOF](https://github.com/mdw771/mdw771.github.io/raw/master/images/research_img_bdof.png "Beyond DOF")
+![Beyond DOF]({{ '/images/research_img_bdof.png' | relative_url }} "Beyond DOF")
 
 Adorym standards for *A*utomatic *D*ifferentiation-based *O*bject *R*etrieval with d*Y*namic *M*odeling.
 It is a modular Python framework that allows users to freely alter or create forward models in the
