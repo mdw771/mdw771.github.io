@@ -1,0 +1,11 @@
+- title: About
+  url: /about/
+- title: Hobby Portfolio
+  url: /portfolio/
+- title: Publications
+  url: https://scholar.google.com/citations?user=fw3MNIsAAAAJ
+  external: true
+- title: Research
+  url: /research/
+- title: Software
+  url: /software/
